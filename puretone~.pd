@@ -1,0 +1,14 @@
+#N canvas 0 39 740 701 10;
+#X floatatom 143 143 8 0 0 1 Hz - -;
+#X obj 108 175 osc~;
+#X msg 109 64 440;
+#X obj 109 35 loadbang;
+#X obj 111 124 hsl 128 15 20 20000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 1900 1;
+#X obj 108 205 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X coords 0 -1 1 1 150 60 1 100 100;

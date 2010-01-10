@@ -1,0 +1,18 @@
+#N canvas 0 39 740 701 10;
+#X obj 109 -144 sig~;
+#X msg 109 -166 1;
+#X obj 109 -120 ifft~;
+#X text 156 -158 generate an impulse (PD is stupid \, so I have to
+do this the dumb way);
+#X obj 108 -70 outlet~;
+#X obj 109 -195 loadbang;
+#X msg 171 -127 set \$1;
+#X obj 109 -96 /~ \$1;
+#X obj 171 -100 block~;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 7 0;
+#X connect 5 0 1 0;
+#X connect 6 0 8 0;
+#X connect 7 0 4 0;
+#X coords 0 0 1 1 208 175 0;

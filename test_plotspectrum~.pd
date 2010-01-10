@@ -1,0 +1,15 @@
+#N canvas 0 39 740 701 10;
+#X obj 150 37 select-input~;
+#X obj 168 210 plotspectrum~;
+#X obj 93 454 *~ 2;
+#X obj 143 485 plotspectrum~;
+#X obj 213 445 print~;
+#X obj 228 406 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 44 244 output~;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 6 0;
+#X connect 1 0 4 0;
+#X connect 2 0 3 0;
+#X connect 5 0 4 0;
