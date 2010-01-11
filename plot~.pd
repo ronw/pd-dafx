@@ -3,7 +3,7 @@
 #X obj 436 -14 block~;
 #X text 382 -126 initial limits;
 #X obj 435 31 s \$0-maxy;
-#X obj 56 -139 inlet~;
+#X obj 22 -137 inlet~;
 #X obj 422 -83 \$1;
 #X obj 436 -61 expr if($i1 > 0 \, $i1 \, 64);
 #X obj 435 74 s \$0-minx;
@@ -32,18 +32,18 @@
 #X obj 395 469 s \$0-signal;
 #X text 384 149 configure plot limits and labels;
 #X obj 318 -141 inlet;
-#X obj 55 66 s \$0-signal;
+#X obj 38 74 s \$0-signal;
 #X msg 481 220 xlabel \$2 \$1;
-#X text 27 -73 autoscale y limits (currently unimplemented because
+#X text 10 -65 autoscale y limits (currently unimplemented because
 I can't figure out how to find the max and min samples in a window).
 ;
 #X msg 395 331 ylabel \$1 \$2;
-#X obj 56 -111 tabsend~ \$0-signal;
+#X obj 22 -87 tabsend~ \$0-signal;
 #X text 324 457 disabled;
 #X text 360 24 disabled;
-#X msg 55 40 normalize;
+#X msg 38 48 normalize;
 #X text 323 344 disabled;
-#X text 29 -28 This works \, but its not syncronized with the tabsend~
+#X text 12 -20 This works \, but its not syncronized with the tabsend~
 (when using metro for timing) so it looks horrible. Is there a way
 to get one bang per block?;
 #N canvas 0 0 450 300 (subpatch) 0;
@@ -52,8 +52,13 @@ to get one bang per block?;
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 64 -1 200 140 1;
 #X restore 105 130 graph;
+#X floatatom 268 114 5 0 0 0 yscale - #0-scale;
+#X obj 22 -111 *~;
+#X obj 268 55 loadbang;
+#X msg 268 77 1;
+#X obj 74 -137 r \$0-scale;
 #X connect 0 0 1 0;
-#X connect 4 0 37 0;
+#X connect 4 0 45 0;
 #X connect 5 0 6 0;
 #X connect 6 0 12 0;
 #X connect 6 0 0 0;
@@ -77,4 +82,8 @@ to get one bang per block?;
 #X connect 32 0 6 0;
 #X connect 34 0 16 0;
 #X connect 40 0 33 0;
+#X connect 45 0 37 0;
+#X connect 46 0 47 0;
+#X connect 47 0 44 0;
+#X connect 48 0 45 1;
 #X coords 0 -1 1 1 210 175 1 100 100;
