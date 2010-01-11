@@ -1,4 +1,6 @@
 #N canvas 0 39 740 701 10;
 #X obj 91 68 select-input~;
 #X obj 92 319 dac~;
+#X obj 166 249 plotsignal~;
 #X connect 0 0 1 0;
+#X connect 0 0 2 0;
