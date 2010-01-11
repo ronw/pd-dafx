@@ -1,6 +1,6 @@
 #N canvas 0 39 740 701 10;
-#X obj 88 121 plotsignal~;
-#X obj 370 116 plotsignal~;
+#X obj 88 121 plot~;
+#X obj 370 116 plot~;
 #X floatatom 156 15 5 0 0 0 - - -;
 #X msg 19 28 bang;
 #X msg 66 28 set 512;
