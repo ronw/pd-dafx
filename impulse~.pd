@@ -1,18 +1,31 @@
 #N canvas 0 39 740 701 10;
-#X obj 109 -144 sig~;
-#X msg 109 -166 1;
-#X obj 109 -120 ifft~;
-#X text 156 -158 generate an impulse (PD is stupid \, so I have to
+#X obj 212 -65 sig~;
+#X msg 212 -90 1;
+#X obj 212 -40 ifft~;
+#X obj 212 10 outlet~;
+#X obj 73 -116 loadbang;
+#X obj 212 -15 /~ \$1;
+#X obj 6 -89 inlet;
+#X msg 289 -14 set \$1;
+#X obj 289 11 block~;
+#X obj 6 -21 s \$0-blocksize;
+#X obj 262 -40 r \$0-blocksize;
+#X text 167 -128 generate an impulse (PD is stupid \, so I have to
 do this the dumb way);
-#X obj 108 -70 outlet~;
-#X obj 109 -195 loadbang;
-#X msg 171 -127 set \$1;
-#X obj 109 -96 /~ \$1;
-#X obj 171 -100 block~;
+#X obj 73 -89 \$1;
+#X obj 6 -51 expr if($i1 > 0 \, $i1 \, 64);
+#X text 10 -189 Generates and impulse train. The period can be specified
+via a creation argument or through the inlet (defaults to 64).;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
-#X connect 2 0 7 0;
-#X connect 5 0 1 0;
-#X connect 6 0 8 0;
-#X connect 7 0 4 0;
+#X connect 2 0 5 0;
+#X connect 4 0 1 0;
+#X connect 4 0 12 0;
+#X connect 5 0 3 0;
+#X connect 6 0 13 0;
+#X connect 7 0 8 0;
+#X connect 10 0 5 1;
+#X connect 10 0 7 0;
+#X connect 12 0 13 0;
+#X connect 13 0 9 0;
 #X coords 0 0 1 1 208 175 0;

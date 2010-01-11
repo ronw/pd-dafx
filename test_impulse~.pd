@@ -1,0 +1,12 @@
+#N canvas 0 39 740 701 10;
+#X obj 88 121 plotsignal~;
+#X obj 370 116 plotsignal~;
+#X floatatom 156 15 5 0 0 0 - - -;
+#X msg 19 28 bang;
+#X msg 66 28 set 512;
+#X obj 372 85 impulse~ 128;
+#X obj 91 75 impulse~;
+#X msg 354 7 512;
+#X connect 5 0 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 5 0;
