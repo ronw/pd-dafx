@@ -1,0 +1,18 @@
+#N canvas 0 39 740 701 10;
+#X obj 138 33 select-input~;
+#X obj 44 244 output~;
+#X obj 191 239 plot~;
+#X obj 138 478 plot~ 512;
+#X obj 457 238 plot~ 44100;
+#X msg 622 153 3000;
+#X msg 566 141 44100;
+#X floatatom 583 196 5 0 0 0 - - -;
+#X obj 360 197 lop~ 50;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 0 0 8 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 0;
+#X connect 7 0 4 1;
+#X connect 8 0 4 0;
