@@ -1,0 +1,14 @@
+This package contains a set of pd / puredata (these terms are so hard
+to find on the web its not even funny!) abstractions for demoing
+digital audio effects, plotting signal, Fourier spectra, computing
+impulse resonses, and more.
+
+Some abstractions depend on the expr/fexpr library
+(http://www.crca.ucsd.edu/~yadegari/expr.html).
+
+Copyright 2010 Ron Weiss <ronw@nyu.edu>
+
+The portions written by me are distributed under the terms of the GNU
+General Public License.  See the file COPYING for details.
+
+
