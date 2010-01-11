@@ -1,0 +1,21 @@
+#N canvas 0 39 740 701 10;
+#X obj 20 63 fexpr~ ($x[0] + $x[-$i2])/2;
+#X obj 20 36 inlet~;
+#X obj 206 36 inlet;
+#X obj 328 37 loadbang;
+#X obj 328 142 block~;
+#X msg 328 115 set \$1;
+#X obj 328 88 expr if($i1 > 0 \, $i1 \, 64);
+#X obj 328 63 \$1;
+#X obj 19 89 outlet~;
+#X text 19 -36 FIR comb filter (max delay of 64 samples due to blocking
+\, unless creation argument is passed to create larger delay line)
+;
+#X text 326 16 set block size;
+#X connect 0 0 8 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;

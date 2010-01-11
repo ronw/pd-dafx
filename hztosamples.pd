@@ -1,0 +1,13 @@
+#N canvas 0 39 740 701 10;
+#X obj 31 107 samplerate~;
+#X obj 121 40 inlet;
+#X text 120 19 Frequency (Hz);
+#X obj 103 166 outlet;
+#X obj 103 137 /;
+#X text 160 168 samples;
+#X obj 31 81 t b;
+#X connect 0 0 4 0;
+#X connect 1 0 4 1;
+#X connect 1 0 6 0;
+#X connect 4 0 3 0;
+#X connect 6 0 0 0;
