@@ -5,13 +5,13 @@
 #X obj 225 103 plots~ 1024;
 #X obj 17 506 select-output~;
 #X obj 56 265 hsl 120 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2320 1;
+-1 -1 3000 1;
 #X floatatom 53 280 5 0 0 0 - - -;
 #X obj 53 105 lfo~;
 #X obj 53 216 snapshot~;
 #X obj 116 189 metro 1;
 #X obj 116 141 loadbang;
-#X obj 116 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 116 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 138 163 enable lfo;
 #X obj 43 305 wahwah~;
