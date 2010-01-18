@@ -1,0 +1,10 @@
+#N canvas 0 39 612 701 10;
+#X obj 11 27 impulse~ 1024;
+#X obj 29 57 T~;
+#X obj 11 88 +~;
+#X obj 11 121 plots~ 1024;
+#X text 8 10 impulse response of simple FIR lowpass filter;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 2 0 3 0;

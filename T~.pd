@@ -1,0 +1,11 @@
+#N canvas 0 39 612 701 10;
+#X obj 14 37 inlet~;
+#X obj 14 124 outlet~;
+#X text 14 11 Delay input by one sample;
+#X obj 15 95 biquad~;
+#X obj 72 66 pack 0 0 0 1 0;
+#X obj 72 37 loadbang;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X connect 5 0 4 0;
