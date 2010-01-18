@@ -1,0 +1,17 @@
+#N canvas 0 0 1257 744 10;
+#X obj 171 140 osc~;
+#X text 15 10 Low Frequency Oscillator;
+#X obj 102 52 inlet;
+#X obj 170 168 outlet~;
+#X msg 153 76 1;
+#X obj 153 52 loadbang;
+#X floatatom 171 114 5 0 0 1 Hz - -;
+#X obj 105 114 hsl 64 14 0 5 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1460 1;
+#X connect 0 0 3 0;
+#X connect 2 0 7 0;
+#X connect 4 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;
+#X connect 7 0 6 0;
+#X coords 0 -1 1 1 125 30 1 100 100;
