@@ -1,10 +1,10 @@
-#N canvas 0 39 740 701 10;
-#X obj 102 -161 inlet~;
-#X obj 288 -145 inlet;
-#X obj 101 119 plot~ \$1;
-#X obj 314 119 plotspectrum~ \$1;
+#N canvas 0 0 1257 744 10;
+#X obj 101 -17 inlet~;
+#X obj 293 -17 inlet;
+#X obj 100 115 plot~ \$1;
+#X obj 304 100 plotspectrum~ \$1;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
 #X connect 1 0 2 1;
 #X connect 1 0 3 1;
-#X coords 0 -1 1 1 625 195 1 100 100;
+#X coords 0 -1 1 1 608 185 1 100 100;

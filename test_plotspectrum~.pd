@@ -1,4 +1,4 @@
-#N canvas 0 39 740 701 10;
+#N canvas 0 39 612 701 10;
 #X obj 54 18 select-input~;
 #X obj 93 454 *~ 2;
 #X obj 44 244 output~;
@@ -7,10 +7,12 @@
 #X obj 143 485 plotspectrum~ 64;
 #X msg 546 456 128;
 #X msg 513 456 64;
+#X obj 175 410 plotpowspec~;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
+#X connect 0 0 8 0;
 #X connect 1 0 5 0;
 #X connect 6 0 5 1;
 #X connect 7 0 5 1;
