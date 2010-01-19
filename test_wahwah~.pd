@@ -1,20 +1,24 @@
 #N canvas 0 0 1257 744 10;
 #X obj 18 -25 select-input~;
 #X obj 16 558 output~;
-#X obj 225 497 plots~ 1024;
-#X obj 225 103 plots~ 1024;
+#X obj 280 497 plots~ 1024;
+#X obj 280 103 plots~ 1024;
 #X obj 17 506 select-output~;
 #X obj 56 265 hsl 120 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 3000 1;
+-1 -1 5950 1;
 #X floatatom 53 280 5 0 0 0 - - -;
 #X obj 53 105 lfo~;
 #X obj 53 216 snapshot~;
-#X obj 116 189 metro 1;
-#X obj 116 141 loadbang;
-#X obj 116 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 67 189 metro 1;
+#X obj 67 141 loadbang;
+#X obj 67 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 138 163 enable lfo;
+#X text 86 165 enable lfo;
 #X obj 43 305 wahwah~;
+#X obj 143 193 bendin;
+#X obj 143 219 / 8192;
+#X obj 143 243 - 1;
+#X text 192 191 Use midi pitch bend to control;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 13 0;
@@ -29,3 +33,6 @@
 #X connect 11 0 9 0;
 #X connect 13 0 4 1;
 #X connect 13 0 2 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 16 0 5 0;
