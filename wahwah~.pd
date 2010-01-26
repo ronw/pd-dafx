@@ -19,8 +19,8 @@
 #X obj 108 168 hsl 64 14 5 2000 0 0 empty empty bandwidth -2 -8 0 10
 -262144 -1 -1 1563 1;
 #X floatatom 174 201 5 0 0 1 Hz - #0-depth;
-#X obj 108 201 hsl 64 14 1 2000 0 0 empty empty depth -2 -8 0 10 -262144
--1 -1 1573 1;
+#X obj 108 201 hsl 64 14 1 2000 0 0 empty empty sweep_depth -2 -8 0
+10 -262144 -1 -1 1573 1;
 #X floatatom 174 138 5 0 0 1 Hz - #0-center-freq;
 #X obj 108 138 hsl 64 14 20 3000 0 0 empty empty center_freq -2 -8
 0 10 -262144 -1 -1 2072 1;
