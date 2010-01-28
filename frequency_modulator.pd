@@ -1,0 +1,39 @@
+#N canvas 509 31 576 567 10;
+#X obj 272 404 dac~;
+#X text 195 10 carrier_frequency;
+#X obj 204 27 vsl 15 128 50 1500 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 10700 1;
+#X floatatom 204 170 5 0 0 0 - - -;
+#X obj 338 26 vsl 15 128 0 50 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 500 1;
+#X floatatom 338 169 5 0 0 0 - - -;
+#X text 330 10 modulation_frequency;
+#X obj 338 193 osc~;
+#X obj 421 171 hsl 128 15 0 1500 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 4300 1;
+#X floatatom 418 202 5 0 0 0 - - -;
+#X obj 338 237 *~;
+#X obj 273 268 +~;
+#X obj 272 311 osc~;
+#X obj 273 349 *~ 0;
+#X obj 365 299 hsl 128 15 0 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 10700 1;
+#X text 364 284 volume;
+#X obj 362 332 dbtorms;
+#X text 418 153 modulation index;
+#X obj 8 371 plot~;
+#X connect 2 0 3 0;
+#X connect 3 0 11 0;
+#X connect 4 0 5 0;
+#X connect 5 0 7 0;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 1;
+#X connect 10 0 11 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 13 0 0 0;
+#X connect 13 0 0 1;
+#X connect 13 0 18 0;
+#X connect 14 0 16 0;
+#X connect 16 0 13 1;
