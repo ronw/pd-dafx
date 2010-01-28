@@ -1,4 +1,4 @@
-#N canvas 0 39 612 701 10;
+#N canvas 0 0 1257 744 10;
 #X obj 18 -25 select-input~;
 #X obj 16 569 output~;
 #X obj 225 508 plots~ 1024;
