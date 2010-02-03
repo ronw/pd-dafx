@@ -5,7 +5,7 @@
 #X obj 280 103 plots~ 1024;
 #X obj 17 506 select-output~;
 #X obj 56 265 hsl 120 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5950 1;
+-1 -1 7066 1;
 #X floatatom 53 280 5 0 0 0 - - -;
 #X obj 53 105 lfo~;
 #X obj 53 216 snapshot~;
@@ -15,10 +15,10 @@
 1;
 #X text 86 165 enable lfo;
 #X obj 43 305 wahwah~;
-#X obj 143 193 bendin;
-#X obj 143 219 / 8192;
+#X obj 143 193 ctlin;
+#X text 192 191 Use midi modulation to control;
+#X obj 143 219 / 64;
 #X obj 143 243 - 1;
-#X text 192 191 Use midi pitch bend to control;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 0 13 0;
@@ -33,6 +33,6 @@
 #X connect 11 0 9 0;
 #X connect 13 0 4 1;
 #X connect 13 0 2 0;
-#X connect 14 0 15 0;
-#X connect 15 0 16 0;
-#X connect 16 0 5 0;
+#X connect 14 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 5 0;
