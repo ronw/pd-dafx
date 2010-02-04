@@ -1,0 +1,18 @@
+#N canvas 0 0 1257 744 10;
+#X obj 18 -25 select-input~;
+#X obj 16 438 output~;
+#X obj 318 407 plots~ 1024;
+#X obj 322 -25 plots~ 1024;
+#X text 144 103 measure impulse response;
+#X obj 17 386 select-output~;
+#X obj 146 120 impulse~ 1024;
+#X obj 145 364 +~ 0;
+#X obj 17 146 select-output~;
+#X connect 0 0 3 0;
+#X connect 0 0 8 0;
+#X connect 5 0 1 0;
+#X connect 5 0 1 1;
+#X connect 6 0 8 1;
+#X connect 7 0 5 1;
+#X connect 7 0 2 0;
+#X connect 8 0 5 0;
