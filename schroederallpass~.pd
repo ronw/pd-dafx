@@ -1,0 +1,14 @@
+#N canvas 356 259 450 300 10;
+#X obj 25 52 inlet~;
+#X obj 96 55 inlet;
+#X obj 247 54 inlet;
+#X text 35 34 x;
+#X text 104 37 M;
+#X text 248 39 g;
+#X obj -13 172 outlet~;
+#X obj -43 14 block~ 8820;
+#X obj -23 124 fexpr~ -$f3*$x[0] + $x[-$i2] + $f3*$y[-$i2];
+#X connect 0 0 8 0;
+#X connect 1 0 8 1;
+#X connect 2 0 8 2;
+#X connect 8 0 6 0;
